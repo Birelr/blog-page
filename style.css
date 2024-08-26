@@ -48,7 +48,11 @@
     
 }
 .sp1 {
-    color: #a689a9;
-    font-size: 0.8rem;
-    margin: 1rem 0;
+    color: #9f84a1;
+
+}
+.sp2 {
+    color: #ffffff;
+    padding: 0.4rem;
+    font-size: 1.1rem;
 }
