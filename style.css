@@ -8,7 +8,6 @@
 }
 
 .bl1 {
-    background-color: red;
     color: white;
     min-height: 10rem;
     height: 25rem;
@@ -18,7 +17,7 @@
 .bl1 h1 {
     position: absolute;
     top: 50%;
-    left: 20%;
+    left: 19%;
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
@@ -31,8 +30,9 @@
 }
 
 .blogsec{
-    margin: 3rem 0 0 15%;
+    margin: 3rem 0 3rem 15%;
     max-width: 50%;
+    min-height: 350px;
 }
 .blogsec > * {
     padding: 1rem; 
@@ -47,12 +47,127 @@
     letter-spacing: 0.1rem;
     
 }
-.sp1 {
-    color: #9f84a1;
+
+
+.readmore {
+    color: rgb(223, 251, 216);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 1rem;
+    transition: all 0.3s cubic-bezier(1, -1.76, 0.07, 2.89);
+    
 
 }
-.sp2 {
-    color: #ffffff;
-    padding: 0.4rem;
-    font-size: 1.1rem;
+.readmore:hover {
+    background-color: rgba(27, 53, 42);
+    color: rgb(223, 251, 216);
+    padding: 1rem;
+    
 }
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: hwb(0 0% 100% / 0.75);
+  }
+  
+.popup-content {
+    background-color: #020202;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #131313;
+    border-radius: 10px;
+    width: 70%;
+}
+  
+  .close {
+    color: #e6e6e6;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color:  #3e0000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  #popup-title {
+    margin-bottom: 1rem;
+  }
+  
+  #popup-author {
+    margin-bottom: 1.5rem;
+  }
+  
+  #popup-content {
+    margin-bottom: 1.5rem;
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .blogsec {
+        margin: 3rem 0 0 5%;
+        max-width: 90%;
+    }
+    .bl1 h1 {
+        left: 15%;
+    }
+    .bl1 {
+        height: 20rem;
+    }
+    .popup-content {
+        width: 90%;
+    }
+    
+  }
+
+  @media screen and (max-width: 480px) {
+    .bl1 h1 {
+        left: 15%;
+    }
+    .bl1 {
+        height: 15rem;
+    }
+    .blogsec {
+        margin: 3rem 0 0 2%;
+        max-width: 95%;
+    }
+    .popup-content {
+        width: 95%;
+    }
+    .close {
+        font-size: 20px;
+    }
+    
+  }
+  @media screen and (max-width: 320px) {
+    .bl1 h1 {
+        left: 20%;
+    }
+    .bl1 {
+        height: 10rem;
+    }
+    .blogsec {
+        margin: 3rem 0 0 1%;
+        max-width: 95%;
+    }
+    .popup-content {
+        width: 95%;
+    }
+    .close {
+        font-size: 18px;
+    }
+    
+  }
